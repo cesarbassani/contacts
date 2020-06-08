@@ -5,6 +5,17 @@ class SplashView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          SizedBox(
+            width: double.infinity,
+          ),
+          Text("OK"),
+          Text("Teste"),
+        ],
+      ),
     );
   }
 }
