@@ -1,16 +1,15 @@
+import 'package:contacts/android/styles.dart';
 import 'package:flutter/material.dart';
 
 class AndroidApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: Container(
-        child: Text(
+      title: 'Contacts',
+      debugShowCheckedModeBanner: false,
+      theme: androidTheme(),
+      home: Scaffold(
+        body: Text(
           "OK",
         ),
       ),
