@@ -17,6 +17,22 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            leading: Image.network("https://balta.io/imgs/andrebaltieri.jpg"),
+            trailing: FlatButton(
+              onPressed: () {},
+              child: Icon(
+                Icons.chat,
+                color: Theme.of(context).primaryColor,
+              ),
+            ),
+            title: Text("Cesar Bassani"),
+            subtitle: Text("67 98112-2131"),
+          ),
+        ],
+      ),
     );
   }
 }
