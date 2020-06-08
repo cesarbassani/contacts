@@ -9,8 +9,17 @@ class AndroidApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: androidTheme(),
       home: Scaffold(
-        body: Text(
-          "OK",
+        body: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 40,
+            ),
+            Text("Testando a fonte"),
+            RaisedButton(
+              child: Text("OK"),
+              onPressed: () {},
+            )
+          ],
         ),
       ),
     );
