@@ -45,6 +45,14 @@ class HomeView extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Theme.of(context).primaryColor,
+        child: Icon(
+          Icons.add,
+          color: Theme.of(context).accentColor,
+        ),
+      ),
     );
   }
 }
