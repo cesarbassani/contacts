@@ -12,8 +12,21 @@ class SplashView extends StatelessWidget {
           SizedBox(
             width: double.infinity,
           ),
-          Text("OK"),
-          Text("Teste"),
+          Icon(
+            Icons.fingerprint,
+            size: 72,
+            color: Theme.of(context).accentColor,
+          ),
+         SizedBox(
+           height: 20,
+         ),
+          Text(
+            "Meus Contatos",
+            style: TextStyle(
+              fontSize: 24,
+              color: Theme.of(context).accentColor,
+            ),
+          ),
         ],
       ),
     );
