@@ -31,10 +31,76 @@ class DetailsView extends StatelessWidget {
                 color: Colors.red,
                 borderRadius: BorderRadius.circular(100),
                 image: DecorationImage(
-                  image: NetworkImage("https://balta.io/imgs/andrebaltieri.jpg"),
+                  image:
+                      NetworkImage("https://balta.io/imgs/andrebaltieri.jpg"),
                 ),
               ),
             ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            "André Baltieri",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            "11 98741-2282",
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          Text(
+            "andre@balta.io",
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              FlatButton(
+                onPressed: () {},
+                color: Theme.of(context).primaryColor,
+                shape: CircleBorder(
+                  side: BorderSide.none,
+                ),
+                child: Icon(
+                  Icons.phone,
+                  color: Theme.of(context).accentColor,
+                ),
+              ),
+              FlatButton(
+                onPressed: () {},
+                color: Theme.of(context).primaryColor,
+                shape: CircleBorder(
+                  side: BorderSide.none,
+                ),
+                child: Icon(
+                  Icons.email,
+                  color: Theme.of(context).accentColor,
+                ),
+              ),
+              FlatButton(
+                onPressed: () {},
+                color: Theme.of(context).primaryColor,
+                shape: CircleBorder(
+                  side: BorderSide.none,
+                ),
+                child: Icon(
+                  Icons.camera_enhance,
+                  color: Theme.of(context).accentColor,
+                ),
+              ),
+            ],
           ),
         ],
       ),
