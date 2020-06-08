@@ -20,7 +20,19 @@ class HomeView extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           ListTile(
-            leading: Image.network("https://balta.io/imgs/andrebaltieri.jpg"),
+            leading: Container(
+              width: 48,
+              height: 48,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(48),
+                image: DecorationImage(
+                  image: NetworkImage(
+                    "https://balta.io/imgs/andrebaltieri.jpg",
+                  ),
+                ),
+              ),
+            ),
             trailing: FlatButton(
               onPressed: () {},
               child: Icon(
