@@ -1,3 +1,4 @@
+import 'package:contacts/android/views/details.view.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -34,7 +35,14 @@ class HomeView extends StatelessWidget {
               ),
             ),
             trailing: FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailsView(),
+                  ),
+                );
+              },
               child: Icon(
                 Icons.chat,
                 color: Theme.of(context).primaryColor,
