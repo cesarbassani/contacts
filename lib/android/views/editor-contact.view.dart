@@ -8,6 +8,53 @@ class EditorContactView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: model == null ? Text("Novo Contato") : Text("Editar Contato"),
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(20),
+        child: Form(
+          child: Column(
+            children: <Widget>[
+              TextFormField(
+                initialValue: model?.name,
+                onSaved: (val) {
+                  model?.name = val;
+                },
+              ),
+              TextFormField(
+                initialValue: model?.phone,
+                onSaved: (val) {
+                  model?.phone = val;
+                },
+              ),
+              TextFormField(
+                initialValue: model?.email,
+                onSaved: (val) {
+                  model?.email = val;
+                },
+              ),
+              SizedBox(
+                  height: 20,
+              ),
+              FlatButton(
+                color: Theme.of(context).primaryColor,
+                onPressed: () {},
+                child: Text(
+                  "SALVAR",
+                  style: TextStyle(
+                    color: Theme.of(context).accentColor,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

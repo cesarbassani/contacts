@@ -26,7 +26,6 @@ class HomeView extends StatelessWidget {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
-                color: Colors.red,
                 borderRadius: BorderRadius.circular(48),
                 image: DecorationImage(
                   image: NetworkImage(
