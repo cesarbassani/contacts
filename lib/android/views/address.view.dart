@@ -13,19 +13,56 @@ class AddressView extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Container(
-            color: Colors.red,
             height: 80,
+            child: ListTile(
+              title: Text(
+                "Endereço Atual",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                ),
+              ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "Rua do Desenvolvedor, 256",
+                    style: TextStyle(
+                      fontSize: 12,
+                    ),
+                  ),
+                  Text(
+                    "Piracicaba/SP",
+                    style: TextStyle(
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
+              isThreeLine: true,
+            ),
           ),
           Container(
-            color: Colors.green,
             height: 80,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  labelText: "Pesquisar...",
+                ),
+              ),
+            ),
           ),
           Expanded(
             child: Container(
-              color: Colors.blue,
+              color: Colors.blue.withOpacity(0.2),
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.my_location),
       ),
     );
   }
