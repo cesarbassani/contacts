@@ -1,4 +1,5 @@
 import 'package:contacts/android/views/editor-contact.view.dart';
+import 'package:contacts/ios/styles.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeView extends StatelessWidget {
@@ -37,7 +38,7 @@ class HomeView extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: ListView(
+                    child: Column(
                       children: <Widget>[
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,11 +57,34 @@ class HomeView extends StatelessWidget {
                             ),
                             Expanded(
                               child: Container(
-                                color: Color(0xFFFFCC00),
-                                child: Text(
-                                  "Olá",
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "André Baltieri",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                    Text(
+                                      "11 97222-7894",
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
+                            ),
+                            CupertinoButton(
+                              child: Icon(
+                                CupertinoIcons.person,
+                                color: primaryColor,
+                              ),
+                              onPressed: () {},
                             ),
                           ],
                         ),
