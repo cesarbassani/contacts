@@ -1,4 +1,3 @@
-
 import 'package:contacts/ios/styles.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -69,6 +68,78 @@ class DetailsView extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    CupertinoButton(
+                      onPressed: () {},
+                      child: Icon(
+                        CupertinoIcons.phone,
+                      ),
+                    ),
+                    CupertinoButton(
+                      onPressed: () {},
+                      child: Icon(
+                        CupertinoIcons.mail,
+                      ),
+                    ),
+                    CupertinoButton(
+                      onPressed: () {},
+                      child: Icon(
+                        CupertinoIcons.photo_camera,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            SizedBox(
+                              width: double.infinity,
+                            ),
+                            Text(
+                              "Endereço",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            Text(
+                              "Rua do desenvolvedor, 256",
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            Text(
+                              "Piracicaba/SP",
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      CupertinoButton(
+                        onPressed: () {},
+                        child: Icon(
+                          CupertinoIcons.location,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
