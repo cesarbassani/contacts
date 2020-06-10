@@ -1,3 +1,4 @@
+import 'package:contacts/android/views/editor-contact.view.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeView extends StatelessWidget {
@@ -9,6 +10,24 @@ class HomeView extends StatelessWidget {
           CupertinoSliverNavigationBar(
             largeTitle: Text(
               "Meus Contatos",
+            ),
+            trailing: CupertinoButton(
+              child: Icon(
+                CupertinoIcons.add,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => HomeView(),
+                  ),
+                );
+              },
+            ),
+          ),
+          SliverFillRemaining(
+            child: Column(
+              children: <Widget>[],
             ),
           ),
         ],
