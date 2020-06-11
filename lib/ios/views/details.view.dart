@@ -1,4 +1,6 @@
 import 'package:contacts/ios/styles.dart';
+import 'package:contacts/ios/views/editor-contact.view.dart';
+import 'package:contacts/models/contact.model.dart';
 import 'package:flutter/cupertino.dart';
 
 class DetailsView extends StatelessWidget {
@@ -15,7 +17,21 @@ class DetailsView extends StatelessWidget {
               child: Icon(
                 CupertinoIcons.pen,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => EditorContactView(
+                      model: ContactModel(
+                        id: "1",
+                        name: "André Baltieri",
+                        email: "andre@balta.io",
+                        phone: "11 97214-2255",
+                      ),
+                    ),
+                  ),
+                );
+              },
             ),
           ),
           SliverFillRemaining(
